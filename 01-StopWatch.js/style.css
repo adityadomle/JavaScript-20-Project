@@ -1,0 +1,120 @@
+body {
+    background:
+        linear-gradient(25deg, #7a9cc6, #2e3a59 50%);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    color: #d0d7e3; /* Light steel blue text */
+}
+
+.container {
+    background-color: #a7b8d8; /* Muted light blue */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(46, 58, 89, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+    color: #2e3a59; /* Deep navy */
+    letter-spacing: 1.5px;
+}
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer {
+    font-size: 40px;
+    background-color: #d0d7e3; /* Light steel blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(46, 58, 89, 0.3);
+    animation: pulse 1.5s infinite alternate;
+    color: #2e3a59; /* Deep navy */
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.timer span {
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+}
+
+.contorls {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #486994; /* Muted medium blue */
+    color: #d0d7e3; /* Light steel blue */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(72, 105, 148, 0.6);
+}
+
+button:hover {
+    background-color: #2e3a59; /* Dark navy */
+}
+
+.lap-title {
+    font-size: 1.5rem;
+    color: #2e3a59;
+    font-weight: 600;
+}
+
+.laps {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #d0d7e3;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(46, 58, 89, 0.3);
+}
+
+li {
+    padding: 1rem;
+    border-bottom: 1px solid #9aa8c6;
+    color: #344a72;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li span {
+    font-weight: 700;
+    color: #2e3a59;
+}
