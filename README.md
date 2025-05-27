@@ -1,4 +1,4 @@
-# JavaScript Projects
+# JavaScript Projects!
 
 This repository contains a collection of small JavaScript projects, built by following tutorials on Udemy. These projects are primarily focused on HTML, CSS, and JavaScript, demonstrating various fundamental concepts and practical applications.
 
