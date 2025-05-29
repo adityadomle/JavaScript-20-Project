@@ -7,7 +7,6 @@ for (let i = 0; i < alpha.length; i++) {
     heading.innerHTML += "<span>" + alpha[i] + "</span>";
 }
 
-
 let count = 0;
 let timer = setInterval(onArrival, 50);
 
