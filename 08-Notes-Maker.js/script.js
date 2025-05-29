@@ -32,7 +32,6 @@ function addNote(){
     main.appendChild(note);
 }
 
-
 function saveNote(){
 
     const notes = document.querySelectorAll(".note textarea")
