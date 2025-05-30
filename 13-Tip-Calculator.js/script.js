@@ -1,4 +1,4 @@
-function calculateTip(){
+function calculateTip() {
 
 
     const billAmountInput = document.getElementById("billAmount");
@@ -15,46 +15,46 @@ function calculateTip(){
     const splitCount = parseInt(splitCountInput.value);
     const mealType = mealTypeSelect.value;
 
-    if(isNaN(billAmount) || isNaN(serviceRating) || isNaN(splitCount)){
+    if (isNaN(billAmount) || isNaN(serviceRating) || isNaN(splitCount)) {
         tipAmountOutput.textContent = "Please Enter Valid Numbers";
-        totalAmountOutput.textContent ="";
+        totalAmountOutput.textContent = "";
         amountPerPersonOutput.textContent = "";
         return;
     }
 
     let tip;
-        switch(serviceRating){
-                case 1:
-                     tip = billAmount * 0.05;
-                    break;
-                case 2:
-                     tip = billAmount * 0.10;
-                    break;
-                case 3:
-                     tip = billAmount * 0.15;
-                    break;
-                case 4:
-                     tip = billAmount * 0.20;
-                    break;
-        }
+    switch (serviceRating) {
+        case 1:
+            tip = billAmount * 0.05;
+            break;
+        case 2:
+            tip = billAmount * 0.10;
+            break;
+        case 3:
+            tip = billAmount * 0.15;
+            break;
+        case 4:
+            tip = billAmount * 0.20;
+            break;
+    }
 
-        let totalAmount = billAmount + tip;
-        let amountPerPerson = totalAmount / splitCount;
+    let totalAmount = billAmount + tip;
+    let amountPerPerson = totalAmount / splitCount;
 
-        if(mealType === "dinner"){
-            tip += 5;
-            totalAmount += 5;
-            amountPerPerson +=5;
-        }
+    if (mealType === "dinner") {
+        tip += 5;
+        totalAmount += 5;
+        amountPerPerson += 5;
+    }
 
 
-        tipAmountOutput.textContent = `Tip: $${tip.toFixed(2)}`;
-        totalAmountOutput.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
-        amountPerPersonOutput.textContent = `Amount Per Person: $${amountPerPerson.toFixed(2)}`;
+    tipAmountOutput.textContent = `Tip: $${tip.toFixed(2)}`;
+    totalAmountOutput.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
+    amountPerPersonOutput.textContent = `Amount Per Person: $${amountPerPerson.toFixed(2)}`;
 
 
 
 }
 
 
-document.getElementById("calculateBtn").addEventListener("click",calculateTip);
+document.getElementById("calculateBtn").addEventListener("click", calculateTip);
