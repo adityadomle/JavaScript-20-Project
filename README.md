@@ -1,37 +1,33 @@
-# JavaScript Projects 🚀
+# 🚀 JavaScript 20 Projects in 20 Days
 
-This repository contains a collection of small JavaScript projects, built by following tutorials on Udemy. These projects are primarily focused on HTML, CSS, and JavaScript, demonstrating various fundamental concepts and practical applications.
+This repository contains **20 JavaScript projects** I built while completing the [JavaScript Projects Course](https://www.udemy.com/course/javascript-projects-course-build-20-projects-in-20-days/?couponCode=KEEPLEARNING) on Udemy. These projects helped me improve my skills in **JavaScript**, **DOM manipulation**, **event handling**, and **responsive UI design**.
 
-## Projects Included:
+## 📚 Course Overview
+Each project is built from scratch using **vanilla JavaScript**, with a focus on clean and interactive web application features. No external libraries or frameworks were used.
 
-Here's a brief overview of the projects in this repository:
+## 🛠️ Projects List
 
-1.  **01-StopWatch.js**: A simple stopwatch application. ⏱️
-2.  **02-Vowel-Counter.js**: A script to count the number of vowels in a given text. 🔠
-3.  **03-Poll-System.js**: A basic implementation of a poll or voting system. 🗳️
-4.  **04-Random-PassGenerator.js**: A tool to generate random passwords. 🔑
-5.  **05-Cash-Calculator.js**: A utility for calculating cash (possibly for change or breaking down amounts). 💰
-6.  **06-Dictionary-App.js**: A basic dictionary application (likely fetching definitions from an API or a local data source). 📚
-7.  **07-Text-Animation.js**: Projects related to animating text on a web page. ✍️
-8.  **08-Notes-Maker.js**: A simple application for creating and managing notes. 📝
-9.  **09-Colour-Generator**: A tool to generate various color codes or palettes. 🎨
-10. **10-Zoom-in-out.js**: Functionality for zooming in and out of elements. 🔍
-11. **11-Paragraph-Generator.js**: A script to generate random paragraphs or text. 📜
+1. **Stopwatch Timer Application** ⏱️  
+2. **Vowel Counter Application** 🔤  
+3. **Poll System Application** 📊  
+4. **Random Password Generator Application** 🔐  
+5. **Cash Calculator Application** 💵  
+6. **Random HEX Color Generator Application** 🎨  
+7. **Note-Taking Application** 📝  
+8. **Dictionary Application** 📚  
+9. **Text Animation Project** ✨  
+10. **Mouse Wheel Zoom-In-Out Application** 🔍  
+11. **Paragraph Generator Application** 📝  
+12. **Loan Calculator Application** 🏦  
+13. **Tip Calculator Application** 💰  
+14. **Digital Clock Project** ⏰  
+15. **Expense Tracker Application** 📈  
+16. **Fixed Deposit Calculator Application** 📊  
+17. **Simple To-Do List Application** ✅  
+18. **BMI Calculator Application** ⚖️  
+19. **Date and Time Widget Application** 📅  
+20. **Advanced Age Calculator Application** 🎂
 
-## Technologies Used:
+## 📂 Repository Structure
 
-* HTML
-* CSS
-* JavaScript
-
-## How to Run:
-
-To run any of these projects, open the `index.html` file (if present in the respective project folder) in your web browser.
-
-## Learning Journey:
-
-These projects were completed as part of a Udemy course, focusing on hands-on learning of web development fundamentals. They serve as a record of my progress and understanding of HTML, CSS, and JavaScript concepts.
-
-## Acknowledgements:
-
-* Udemy tutorials for guiding the learning process. 🙏
+Each project is organized in its own folder for easy navigation:
