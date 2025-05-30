@@ -2,9 +2,9 @@ const addBtn = document.querySelector('#addBtn');
 const main = document.querySelector('#main');
 
 
-addBtn.addEventListener("click",addNote);
+addBtn.addEventListener("click", addNote);
 
-function addNote(){
+function addNote() {
 
     const note = document.createElement("div");
     note.classList.add("note");
@@ -20,41 +20,40 @@ function addNote(){
     const saveIcon = note.querySelector(".save");
     const textarea = note.querySelector("textarea");
 
-    trashIcon.addEventListener("click",()=>{
+    trashIcon.addEventListener("click", () => {
         note.remove();
         saveNote();
 
     });
 
-    saveIcon.addEventListener("click",saveNote);
-    textarea.addEventListener("input",saveNote);
+    saveIcon.addEventListener("click", saveNote);
+    textarea.addEventListener("input", saveNote);
 
     main.appendChild(note);
 }
 
-function saveNote(){
+function saveNote() {
 
     const notes = document.querySelectorAll(".note textarea")
     const data = [];
 
-    for(let i = 0; i < notes.length; i++)
-    {
+    for (let i = 0; i < notes.length; i++) {
         data.push(notes[i].value);
     }
 
-    if(data.length === 0){
+    if (data.length === 0) {
         localStorage.removeItem("notes")
-    }else{
-        localStorage.setItem("notes",JSON.stringify(data));
+    } else {
+        localStorage.setItem("notes", JSON.stringify(data));
     }
 
 }
 
-function loadNotes(){
+function loadNotes() {
     const lsNotes = JSON.parse(localStorage.getItem("notes"));
 
-    if(lsNotes !== null){
-        lsNotes.forEach(noteText =>{
+    if (lsNotes !== null) {
+        lsNotes.forEach(noteText => {
             addNote();
 
             const notes = document.querySelectorAll(".note textarea");
@@ -63,7 +62,7 @@ function loadNotes(){
 
         });
 
-    }else{
+    } else {
         addNote();
     }
 

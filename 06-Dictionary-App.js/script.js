@@ -6,21 +6,21 @@ const wordDescription = document.getElementById('wordDescription');
 const audioButton = document.getElementById('audioButton');
 
 
-searchButton.addEventListener("click",()=>{
+searchButton.addEventListener("click", () => {
     search();
 });
 
-searchInput.addEventListener("keyup",(event)=>{
-    
-    if(event.key === "Enter"){
+searchInput.addEventListener("keyup", (event) => {
+
+    if (event.key === "Enter") {
         search();
     }
 });
 
-function search(){
+function search() {
 
     const searchTerm = searchInput.value.trim();
-    if(searchTerm === ''){
+    if (searchTerm === '') {
         alert('Please Enter a word to Search..')
         return;
     }
@@ -29,33 +29,33 @@ function search(){
 
 }
 
-async function fetchDictionaryData(searchTerm){
+async function fetchDictionaryData(searchTerm) {
 
-    try{
+    try {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`);
-        if(!response.ok){
-            throw new Error('Failed to fetch the Data');    
+        if (!response.ok) {
+            throw new Error('Failed to fetch the Data');
         }
 
         const data = await response.json();
         displayResult(data);
 
-    }catch(error){
+    } catch (error) {
         console.log(error);
         alert('An error Occured.');
     }
 
 }
 
-function displayResult(data){
+function displayResult(data) {
 
     resultContainer.style.display = 'block';
 
-    const wordData = data[0] 
+    const wordData = data[0]
     wordTitle.textContent = wordData.word;
-    wordDescription.innerHTML =  `
+    wordDescription.innerHTML = `
        <ul> 
-        ${wordData.meanings.map(meaning=>`
+        ${wordData.meanings.map(meaning => `
             <li>
                 <p><strong>Part of Speech: </strong> ${meaning.partOfSpeech}</p>
                 <p><strong>Definition: </strong> ${meaning.definitions[0].definition}</p>
@@ -70,10 +70,10 @@ function displayResult(data){
 }
 
 
-audioButton.addEventListener("click",()=>{
+audioButton.addEventListener("click", () => {
 
     const searchTerm = searchInput.value.trim();
-    if(searchTerm === ''){
+    if (searchTerm === '') {
         alert('Please Enter a word to Search..')
         return;
     }
@@ -83,7 +83,7 @@ audioButton.addEventListener("click",()=>{
 });
 
 
-function speak(word){
+function speak(word) {
 
     const speech = new SpeechSynthesisUtterance(word);
     speech.lang = 'en-US';

@@ -52,8 +52,6 @@ function calculateTip() {
     totalAmountOutput.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
     amountPerPersonOutput.textContent = `Amount Per Person: $${amountPerPerson.toFixed(2)}`;
 
-
-
 }
 
 

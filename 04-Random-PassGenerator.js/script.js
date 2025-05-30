@@ -18,14 +18,14 @@ const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+-=[]{}\\|;':\",./<>?";
 
 sliderValue.textContent = inputSlider.value;
-inputSlider.addEventListener("input",()=>{
+inputSlider.addEventListener("input", () => {
 
     sliderValue.textContent = inputSlider.value;
     generatePassword();
 
 });
 
-function generatePassword(){
+function generatePassword() {
     const length = inputSlider.value;
     let characters = "";
     let password = "";
@@ -35,8 +35,8 @@ function generatePassword(){
     characters += numbersEl.checked ? numbers : "";
     characters += symbolsEl.checked ? symbols : "";
 
-    for(let i = 0 ; i < length ; i++){
-       password += characters.charAt(Math.floor(Math.random() * characters.length));
+    for (let i = 0; i < length; i++) {
+        password += characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
     passBox.value = password;
@@ -44,43 +44,43 @@ function generatePassword(){
 
 }
 
-generateBtn.addEventListener("click",()=>{
+generateBtn.addEventListener("click", () => {
     generatePassword();
 });
 
-function updatePasswordIndicator(){
+function updatePasswordIndicator() {
     const passwordStrength = getPasswordStrength(passBox.value);
     console.log(passwordStrength);
     passIndicator.className = "pass-indicator " + passwordStrength;
     console.log(passIndicator.className);
 }
 
-function getPasswordStrength(password){
+function getPasswordStrength(password) {
 
-    if(password.length <=10){
+    if (password.length <= 10) {
         return "weak";
-    }else if (password.length <=20){
+    } else if (password.length <= 20) {
         return "medium";
-    }else{
+    } else {
         return "strong";
     }
 }
 
 
-window.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('DOMContentLoaded', () => {
     updatePasswordIndicator();
 });
 
 
-copyBtn.addEventListener("click",()=>{
+copyBtn.addEventListener("click", () => {
 
-    if(passBox.value != "" || passBox.value.length >= 1){
+    if (passBox.value != "" || passBox.value.length >= 1) {
         navigator.clipboard.writeText(passBox.value);
         copyBtn.innerText = "check";
 
-        setTimeout(()=>{
+        setTimeout(() => {
             copyBtn.innerHTML = "content_copy";
-        },3000);
+        }, 3000);
     }
 
 });

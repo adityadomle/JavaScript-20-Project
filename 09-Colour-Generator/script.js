@@ -1,6 +1,6 @@
 const containerEl = document.querySelector(".container");
 
-for(let index = 0; index < 50; index++){
+for (let index = 0; index < 50; index++) {
 
     const colorContainerEl = document.createElement("div");
     colorContainerEl.classList.add("color-container");
@@ -15,18 +15,18 @@ for(let index = 0; index < 50; index++){
 
     containerEl.appendChild(colorContainerEl);
 
-   // console.log(containerEl);
-    
+    // console.log(containerEl);
+
 }
 
 
-function randomColor(){
+function randomColor() {
 
     const chars = "0123456789ABCDEF";
     const colorCodeLength = 6;
     let colorCode = "";
 
-    for(let index = 0; index < colorCodeLength; index++){
+    for (let index = 0; index < colorCodeLength; index++) {
 
         const randomNum = Math.floor(Math.random() * chars.length);
         colorCode += chars.substring(randomNum, randomNum + 1);
@@ -41,11 +41,11 @@ const mainColorContainerEls = document.querySelectorAll(".color-container");
 generateColors();
 
 
-function generateColors(){
+function generateColors() {
 
-    for(let i = 0; i<mainColorContainerEls.length;i++){
+    for (let i = 0; i < mainColorContainerEls.length; i++) {
 
-      
+
 
         const colorContainerEl = mainColorContainerEls[i];
         const newColorCode = randomColor();
@@ -59,12 +59,12 @@ function generateColors(){
 }
 
 
-mainColorContainerEls.forEach((colorContainerEl)=>{
+mainColorContainerEls.forEach((colorContainerEl) => {
     const copyButtonEl = colorContainerEl.querySelector("button");
     const colorCodeEl = colorContainerEl.querySelector(".color-code");
 
-    copyButtonEl.addEventListener("click",()=>{
-        const colorCode = colorCodeEl.innerText; 
+    copyButtonEl.addEventListener("click", () => {
+        const colorCode = colorCodeEl.innerText;
         copytoCilpBoard(colorCode);
     });
 
@@ -73,14 +73,14 @@ mainColorContainerEls.forEach((colorContainerEl)=>{
 
 
 
-function copytoCilpBoard(text){
+function copytoCilpBoard(text) {
 
-   navigator.clipboard.writeText(text)
-   .then(()=>{
-        alert("Copied to Clipboard : " + text);
-   })
-   .catch((error)=>{
-        console.log("Failed to Copy to Clipboard",error);
-   })
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert("Copied to Clipboard : " + text);
+        })
+        .catch((error) => {
+            console.log("Failed to Copy to Clipboard", error);
+        })
 
 }
