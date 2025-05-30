@@ -8,7 +8,6 @@ const loanAmount = parseFloat(document.getElementById("loanAmountInput").value);
 const interestRate = parseFloat(document.getElementById("interestRateInput").value);
 const loanTerm = parseFloat(document.getElementById("loanTermInput").value);
 
-
     if(isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)){
         alert("Please Enter valid Numbers for all the Fields");
     }
