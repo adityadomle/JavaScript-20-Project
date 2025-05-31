@@ -1,4 +1,4 @@
-document.getElementById("bmiForm").addEventListener('submit',function(e){
+document.getElementById("bmiForm").addEventListener('submit', function (e) {
 
     e.preventDefault();
 
@@ -8,7 +8,7 @@ document.getElementById("bmiForm").addEventListener('submit',function(e){
     const heightInches = parseInt(document.getElementById('height-inches').value);
     const weight = parseFloat(document.getElementById('weight').value);
 
-    if(gender && age && heightFeet && heightInches && weight){
+    if (gender && age && heightFeet && heightInches && weight) {
 
         const heightInMeters = ((heightFeet * 12) + heightInches) * 0.0254;  // in meters
         const bmi = weight / (heightInMeters * heightInMeters);
@@ -16,13 +16,13 @@ document.getElementById("bmiForm").addEventListener('submit',function(e){
 
         let category = '';
 
-        if(bmi < 18.5){
+        if (bmi < 18.5) {
             category = 'Under Weight';
-        }else if (bmi >= 18.5 && bmi < 24.9){
+        } else if (bmi >= 18.5 && bmi < 24.9) {
             category = 'Normal Weight '
-        }else if (bmi >= 25 && bmi < 29.9){
-            category = 'Over Weight'    
-        }else{
+        } else if (bmi >= 25 && bmi < 29.9) {
+            category = 'Over Weight'
+        } else {
             category = 'Obese'
         }
 
