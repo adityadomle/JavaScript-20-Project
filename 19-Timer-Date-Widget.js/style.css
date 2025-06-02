@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: #1a1a1a;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ body{
     height: 100vh;
 }
 
-.container{
+.container {
     width: 35.87em;
     display: grid;
     align-items: center;
@@ -23,7 +23,7 @@ body{
     animation: neon-glow 1.5s ease-in-out infinite alternate;
 }
 
-.clock-container{
+.clock-container {
     background-color: #1a1a1a;
     color: #fff;
     text-align: center;
@@ -36,35 +36,36 @@ body{
     align-items: center;
 }
 
-.clock-container span{
+.clock-container span {
     width: 120px;
     display: inline-block;
     text-align: center;
 }
 
-.hours{
+.hours {
     color: #ff0000;
 }
 
-.minutes{
+.minutes {
     color: #00ff00;
 }
 
-.seconds{
+.seconds {
     color: #0000ff;
 }
 
-@keyframes neon-glow{
-    0%{
+@keyframes neon-glow {
+    0% {
         box-shadow: 0 0 5px #ffffff, 0 0 20px #ffffff;
     }
-    100%{
+
+    100% {
         box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
     }
 }
 
 
-.date-container{
+.date-container {
     padding: 10px;
     background-color: #2784e0;
     color: #fff;
@@ -72,6 +73,6 @@ body{
     border-radius: 5px;
 }
 
-.date-container span{
+.date-container span {
     font-size: 2.5em;
 }
