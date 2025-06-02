@@ -78,7 +78,6 @@ function calculateAge() {
 
 
 
-
 const ageCalculatorForm = document.getElementById("ageCalculator");
 ageCalculatorForm.addEventListener("submit", (event) => {
   event.preventDefault();
